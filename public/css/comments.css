@@ -1,4 +1,6 @@
-#nodebb *, #nodebb *:before, #nodebb *:after {
+.comment_avatar img { max-width: 80px; max-height: 80px; }
+
+/*#nodebb *, #nodebb *:before, #nodebb *:after {
     -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
@@ -18,8 +20,7 @@
     border-radius: 0px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
-#nodebb .topic-item {
-	font-family: Roboto,Helvetica,Arial,sans-serif;
+/*#nodebb .topic-item {
 	font-size: 14px;
 	line-height: 1.42857;
 	color: #333;
@@ -32,7 +33,7 @@
 	padding-bottom: 5px;
 	display: inline-block;
 	width: 100%;
-}
+}*/
 
 #nodebb .topic-profile-pic {
 	float: left;
@@ -47,8 +48,8 @@
 	text-decoration: none;
 }
 
-#nodebb .user {
-	left: -83px; /*why??*/
+/*#nodebb .user {
+	left: -83px;
 }
 
 #nodebb .topic-text {
@@ -106,15 +107,16 @@
     -ms-transition: opacity 0.3s ease-in;
     transition: opacity 0.3s ease-in;
     opacity: 1;
-}
+}*/
 
-#nodebb .form-control:focus {
+/*#nodebb .form-control:focus {
     border-color: #66AFE9;
     outline: 0px none;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);
 }
-
-#nodebb .form-control {
+*/
+#nodebb .form-submit button { color: #2EA3F2; }
+/*#nodebb .form-control {
     display: block;
     width: 100%;
     padding: 8px 12px;
@@ -180,7 +182,7 @@
 
 #nodebb .nodebb-post-fadein {
 	opacity: 0;
-}
+}*/
 
 #nodebb #nodebb-error {
 	color: #dd3232;
@@ -192,7 +194,6 @@
 
 #nodebb .nodebb-copyright a {
 	text-decoration: none;
-	color: #38C071;
 }
 
 #nodebb .emoji {

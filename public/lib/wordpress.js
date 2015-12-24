@@ -71,7 +71,7 @@
 			}
 			
 			if (commentsCounter) {
-				commentsCounter.innerHTML = data.postCount ? (data.postCount - 1) : 0;
+				commentsCounter.innerHTML = (data.postCount && (data.postCount - 1) === 1) ? (data.postCount - 1) + ' Comment' : (data.postCount && (data.postCount - 1) > 1) ? (data.postCount - 1) + ' Comments' : 'No Comments';
 			}
 
 			if (commentsCategory) {
@@ -147,14 +147,14 @@
 			} else {
 				if (data.isAdmin) {
 					var adminXHR = newXHR();
-					adminXHR.open('GET', '/api/get_post/?post_id=' + articleID);
+					adminXHR.open('GET', '/?json=1&p=' + articleID);
 					adminXHR.onload = function() {
 						if (adminXHR.status >= 200 && adminXHR.status < 400) {
 							var articleData = JSON.parse(adminXHR.responseText.toString()).post,
 								translator = document.createElement('span'),
 								wptags = articleData.tags,
 								tags = [];
-
+							console.log(articleData);
 							translator.innerHTML = articleData.excerpt;
 
 							var markdown = translator.firstChild.innerHTML + '\n\n**Click [here]('+articlePath+') to see the full blog post**';
