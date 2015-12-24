@@ -29,7 +29,7 @@
 		<form action="{relative_path}/comments/reply" method="post">
 			<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3" style="margin-bottom: 25px;"></textarea>
 			<div class="topic-profile-pic user">
-			<!-- IF isLoggedIn -->
+			<!-- IF loggedIn -->
 				<!-- IF user.picture -->
 				<img src="{user.picture}" alt="{user.username}" class="profile-image" title="{user.username}" style="vertical-align: middle;" />
 				<!-- ELSE -->
@@ -52,7 +52,7 @@
 				<button class="et_pb_button" id="nodebb-register">Register</button>
 				<button class="et_pb_button" id="nodebb-login">Login</button>
 			</div><br/>
-			<!-- ENDIF isLoggedIn -->
+			<!-- ENDIF loggedIn -->
 		<div class="clearfix"></div>
 		<div style="max-width: 60%; margin: 0 auto; margin-top: 70px; margin-bottom: 50px; text-align:center;">
 			<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
