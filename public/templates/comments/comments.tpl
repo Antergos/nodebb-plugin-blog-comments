@@ -44,7 +44,8 @@
 			<input type="hidden" name="tid" value="{tid}"/>
 			<input type="hidden" name="url" value="{redirect_url}"/>
 			</form>
-			<!-- ELSE -->
+			<!-- ENDIF loggedIn -->
+			<!-- IF !loggedIn -->
 			<img src="http://1.gravatar.com/avatar/177d180983be7a2c95a4dbe7451abeba?s=95&d=&r=PG" class="profile-image"/>
 			</div>
 			</form>
@@ -52,7 +53,7 @@
 				<button class="et_pb_button" id="nodebb-register">Register</button>
 				<button class="et_pb_button" id="nodebb-login">Login</button>
 			</div><br/>
-			<!-- ENDIF loggedIn -->
+			<!-- ENDIF !loggedIn -->
 		<div class="clearfix"></div>
 		<div style="max-width: 60%; margin: 0 auto; margin-top: 70px; margin-bottom: 50px; text-align:center;">
 			<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
