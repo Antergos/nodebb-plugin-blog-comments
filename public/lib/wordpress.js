@@ -85,11 +85,12 @@
 			if (pagination) {
 				html = normalizePost(parse(data, templates.blocks['posts']));
 				commentsDiv.innerHTML = commentsDiv.innerHTML + html;
-				jQuery(commentsDiv).children().each(function() { jQuery(this).prependTo(jQuery(this).parent()); });
 			} else {
 				html = parse(data, data.template);
 				nodebbDiv.innerHTML = normalizePost(html);
 			}
+
+			jQuery('#commentlist').children().each(function() { jQuery(this).prependTo(jQuery(this).parent()); });
 
 			contentDiv = document.getElementById('nodebb-content');
 

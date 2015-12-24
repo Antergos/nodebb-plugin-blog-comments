@@ -25,7 +25,7 @@
 		<!-- ENDIF isLoggedIn -->
 	<!-- ENDIF atTop -->
 
-	<ol id="commentlist clearfix">
+	<ol id="nodebb-comments-list" class="commentslist clearfix">
 		<!-- BEGIN posts -->
 		<li class="comment nodebb-post-fadein">
 			<article class="comment-body clearfix">
