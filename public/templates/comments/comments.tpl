@@ -52,15 +52,6 @@
 		<!-- END posts -->
 	</ol>
 	<br/>
-	<div style="max-width: 100%; margin: 20px auto;">
-		<div style="max-width: 50%; float:left">
-			<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
-			<a href="{relative_path}/topic/{tid}">View forum thread.</a></small>
-		</div>
-		<div class="form-submit" style="max-width: 50%; float:right">
-			<button class="et_pb_button" <!-- IF !posts.length -->style="display: none"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</button>
-		</div>
-	</div>
 
 	<!-- IF atBottom -->
 	<form action="{relative_path}/comments/reply" method="post">
@@ -68,12 +59,12 @@
 		<div class="topic-profile-pic user">
 		<!-- IF isLoggedIn -->
 			<!-- IF user.picture -->
-			<img src="{user.picture}" alt="{user.username}" class="profile-image" title="{user.username}">
+			<img src="{user.picture}" alt="{user.username}" class="profile-image" title="{user.username}" style="vertical-align: middle;" />
 			<!-- ELSE -->
 			<div class="profile-image" style="background-color: {user.icon:bgColor}" title="{user.username}" alt="{user.username}">{user.icon:text}</div>
 			<!-- ENDIF user.picture -->
-		</div>
 		<small>Signed in as <strong>{user.username}</strong>. <strong id="nodebb-error"></strong></small>
+		</div>
 		<div class="form-submit">
 			<button class="et_pb_button">Post a Reply</button>
 		</div>
@@ -91,6 +82,13 @@
 	</div><br/>
 	<!-- ENDIF isLoggedIn -->
 	<!-- ENDIF atBottom -->
+	<div style="max-width: 60%; margin: 0 auto; margin-top: 50px; margin-bottom: 50px;">
+		<div class="form-submit" style="max-width: 100%;">
+			<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
+			<a href="{relative_path}/topic/{tid}">View forum thread.</a></small> &bull;
+			<a class="" <!-- IF !posts.length -->style="display: none"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</a>
+		</div>
+	</div>
 
 <!-- ELSE -->
 Commenting has been disabled.

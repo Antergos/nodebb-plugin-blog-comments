@@ -200,5 +200,5 @@
 	height: 20px;
 	border-radius: 100%;
 }
-#nodebb .topic-profile-pic { float: left; }
+#nodebb .topic-profile-pic { float: left; line-height: 45px;}
 #nodebb .topic-profile-pic .profile-image { width: 45px; height: 45px; line-height: 45px; font-size: 26px;  color: white;  text-align: center; }
