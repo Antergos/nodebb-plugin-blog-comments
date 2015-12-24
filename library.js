@@ -95,12 +95,13 @@
 					template: Comments.template,
 					token: req.csrfToken(),
 					isAdmin: !data.isAdministrator ? data.isPublisher : data.isAdministrator,
-					loggedIn: uid !== 0,
+					loggedIn: (typeof uid !== 'undefined' && uid !== null && uid !== 0),
 					tid: tid,
 					category: data.category,
 					mainPost: data.mainPost ? data.mainPost[0] : null,
 					atBottom: bottom,
-					atTop: top
+					atTop: top,
+					uid: uid
 				});
 			});
 		});
