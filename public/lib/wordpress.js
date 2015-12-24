@@ -13,12 +13,6 @@
 
 	document.getElementsByTagName("head")[0].appendChild(stylesheet);
 
-	var templatesjs = document.createElement("script");
-	templatesjs.setAttribute("type", "text/javascript");
-	templatesjs.setAttribute("href", pluginURL + '/lib/templates.js');
-
-	document.getElementsByTagName("head")[0].appendChild(templatesjs);
-
 	document.getElementById('nodebb/comments').insertAdjacentHTML('beforebegin', '<div id="nodebb"></div>');
 	nodebbDiv = document.getElementById('nodebb');
 
