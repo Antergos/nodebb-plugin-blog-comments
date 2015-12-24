@@ -112,7 +112,7 @@
 				loadMore.onclick = function() {
 					pagination++;
 					reloadComments();
-				}
+				};
 				if (data.posts.length) {
 					loadMore.style.display = 'inline-block';	
 				}
@@ -173,7 +173,7 @@
 						} else {
 							console.warn('Unable to access API. Please install the JSON API plugin located at: http://wordpress.org/plugins/json-api');
 						}
-					}
+					};
 
 					adminXHR.send();
 				}

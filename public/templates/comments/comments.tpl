@@ -1,30 +1,5 @@
 <div id="commentform">
 	<!-- IF tid -->
-		<!-- IF atTop -->
-		<div class="topic-profile-pic user">
-			<!-- IF isLoggedIn -->
-			<img src="{user.picture}" class="profile-image"/>
-			<!-- ELSE -->
-			<img src="https://1.gravatar.com/avatar/177d180983be7a2c95a4dbe7451abeba?s=95&d=&r=PG" class="profile-image"/>
-			<!-- ENDIF isLoggedIn -->
-		</div>
-		<form action="{relative_path}/comments/reply" method="post">
-			<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3"></textarea>
-			<!-- IF isLoggedIn -->
-			<small>Signed in as <strong>{user.username}</strong>. <strong id="nodebb-error"></strong></small>
-			<button class="btn btn-primary">Post a Reply</button>
-			<input type="hidden" name="_csrf" value="{token}"/>
-			<input type="hidden" name="tid" value="{tid}"/>
-			<input type="hidden" name="url" value="{redirect_url}"/>
-			</form>
-			<!-- ELSE -->
-			</form>
-			<button class="et_pb_button" id="nodebb-register">Register</button>
-			<button class="et_pb_button" id="nodebb-login">Login</button>
-			<br/>
-			<!-- ENDIF isLoggedIn -->
-		<!-- ENDIF atTop -->
-
 		<ol id="nodebb-comments-list" class="commentslist clearfix">
 			<!-- BEGIN posts -->
 			<li class="comment nodebb-post-fadein">
@@ -51,8 +26,6 @@
 			<!-- END posts -->
 		</ol>
 		<br/>
-
-		<!-- IF atBottom -->
 		<form action="{relative_path}/comments/reply" method="post">
 			<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3" style="margin-bottom: 25px;"></textarea>
 			<div class="topic-profile-pic user">
@@ -80,17 +53,14 @@
 				<button class="et_pb_button" id="nodebb-login">Login</button>
 			</div><br/>
 			<!-- ENDIF isLoggedIn -->
-		<!-- ENDIF atBottom -->
 		<div class="clearfix"></div>
 		<div style="max-width: 60%; margin: 0 auto; margin-top: 70px; margin-bottom: 50px; text-align:center;">
 			<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
 			<a href="{relative_path}/topic/{tid}">View forum thread.</a> &bull; </small>
 			<span <!-- IF !posts.length -->style="display: none;" <!-- ELSE --> style="cursor:pointer;color: #2EA3F2;" <!-- ENDIF !posts.length --> id="nodebb-load-more"><small>Load more comments...</small></span>
 		</div>
-
 	<!-- ELSE -->
 	Commenting has been disabled.
-	<!-- ENDIF tid -->
 	<!-- IF isAdmin -->
 	<form action="{relative_path}/comments/publish" method="post">
 		<div class="form-submit">
@@ -104,4 +74,5 @@
 		<input type="hidden" name="_csrf" value="{token}"/>
 	</form>
 	<!-- ENDIF isAdmin -->
+	<!-- ENDIF tid -->
 </div>
