@@ -55,7 +55,11 @@
 	<!-- IF atBottom -->
 		<div class="topic-profile-pic user">
 			<!-- IF isLoggedIn -->
-			<img src="{user.picture}" class="profile-image" />
+				<!-- IF user.picture -->
+				<img src="{user.picture}" alt="{user.username}" class="profile-image" title="{user.username}">
+				<!-- ELSE -->
+				<div class="profile-image" style="background-color: {user.icon:bgColor}" title="{user.username}" alt="{user.username}">{user.icon:text}</div>
+				<!-- ENDIF user.picture -->
 			<!-- ELSE -->
 			<img src="http://1.gravatar.com/avatar/177d180983be7a2c95a4dbe7451abeba?s=95&d=&r=PG" class="profile-image" />
 			<!-- ENDIF isLoggedIn -->
