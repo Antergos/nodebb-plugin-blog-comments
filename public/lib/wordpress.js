@@ -84,10 +84,10 @@
 			}
 
 			if (pagination) {
-				html = normalizePost(templates.parse(data, data.template));
+				html = normalizePost(templates.parse(data.template, data));
 				commentsDiv.innerHTML = commentsDiv.innerHTML + html;
 			} else {
-				html = templates.parse(data, data.template);
+				html = templates.parse(data.template, data);
 				nodebbDiv.innerHTML = normalizePost(html);
 			}
 
