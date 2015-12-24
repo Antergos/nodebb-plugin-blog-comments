@@ -85,8 +85,8 @@
 	<div class="clearfix"></div>
 	<div style="max-width: 60%; margin: 0 auto; margin-top: 70px; margin-bottom: 50px; text-align:center;">
 		<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
-		<a href="{relative_path}/topic/{tid}">View forum thread.</a></small> &bull;
-		<span <!-- IF !posts.length -->style="display: none;"<!-- ELSE --> style="cursor:pointer;"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</span>
+		<a href="{relative_path}/topic/{tid}">View forum thread.</a> &bull; </small>
+		<span <!-- IF !posts.length -->style="display: none;"<!-- ELSE --> style="cursor:pointer;color: #2EA3F2;"<!-- ENDIF !posts.length --> id="nodebb-load-more"><small>Load more comments...</small></span>
 	</div>
 
 <!-- ELSE -->
