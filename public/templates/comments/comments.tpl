@@ -55,7 +55,7 @@
 
 	<!-- IF atBottom -->
 	<form action="{relative_path}/comments/reply" method="post">
-		<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3"></textarea>
+		<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3" style="margin-bottom: 25px;"></textarea>
 		<div class="topic-profile-pic user">
 		<!-- IF isLoggedIn -->
 			<!-- IF user.picture -->
@@ -83,11 +83,9 @@
 	<!-- ENDIF isLoggedIn -->
 	<!-- ENDIF atBottom -->
 	<div style="max-width: 60%; margin: 0 auto; margin-top: 50px; margin-bottom: 50px;">
-		<div class="form-submit" style="max-width: 100%;">
-			<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
-			<a href="{relative_path}/topic/{tid}">View forum thread.</a></small> &bull;
-			<a class="" <!-- IF !posts.length -->style="display: none"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</a>
-		</div>
+		<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
+		<a href="{relative_path}/topic/{tid}">View forum thread.</a></small> &bull;
+		<a <!-- IF !posts.length -->style="display: none"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</a>
 	</div>
 
 <!-- ELSE -->
