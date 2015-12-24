@@ -82,10 +82,11 @@
 	</div><br/>
 	<!-- ENDIF isLoggedIn -->
 	<!-- ENDIF atBottom -->
-	<div style="max-width: 60%; margin: 0 auto; margin-top: 50px; margin-bottom: 50px;">
+	<div class="clearfix"></div>
+	<div style="max-width: 60%; margin: 0 auto; margin-top: 70px; margin-bottom: 50px; text-align:center;">
 		<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
 		<a href="{relative_path}/topic/{tid}">View forum thread.</a></small> &bull;
-		<a <!-- IF !posts.length -->style="display: none"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</a>
+		<span <!-- IF !posts.length -->style="display: none;"<!-- ELSE --> style="cursor:pointer;"<!-- ENDIF !posts.length --> id="nodebb-load-more">Load more comments...</span>
 	</div>
 
 <!-- ELSE -->
