@@ -28,9 +28,19 @@
 		<br/>
 		<form action="{relative_path}/comments/reply" method="post">
 			<textarea id="nodebb-content" class="form-control" name="content" placeholder="Join the conversation" rows="3" style="margin-bottom: 25px;"></textarea>
+				<!-- IF !loggedIn -->
 			<div class="topic-profile-pic user">
+			<img src="http://1.gravatar.com/avatar/177d180983be7a2c95a4dbe7451abeba?s=95&d=&r=PG" class="profile-image"/>
+			</div>
+				<div class="form-submit not_logged_in">
+				<button class="et_pb_button" id="nodebb-register">Register</button>
+				<button class="et_pb_button" id="nodebb-login">Login</button>
+			</div><br/>
+			<!-- ENDIF !loggedIn -->
 			<!-- IF loggedIn -->
+			<div class="logged_in">
 				<!-- IF user.picture -->
+				<div class="topic-profile-pic user">
 				<img src="{user.picture}" alt="{user.username}" class="profile-image" title="{user.username}" style="vertical-align: middle;" />
 				<!-- ELSE -->
 				<div class="profile-image" style="background-color: {user.icon:bgColor}" title="{user.username}" alt="{user.username}">{user.icon:text}</div>
@@ -43,17 +53,9 @@
 			<input type="hidden" name="_csrf" value="{token}"/>
 			<input type="hidden" name="tid" value="{tid}"/>
 			<input type="hidden" name="url" value="{redirect_url}"/>
+				</div>
 			</form>
 			<!-- ENDIF loggedIn -->
-			<!-- IF !loggedIn -->
-			<img src="http://1.gravatar.com/avatar/177d180983be7a2c95a4dbe7451abeba?s=95&d=&r=PG" class="profile-image"/>
-			</div>
-			</form>
-			<div class="form-submit">
-				<button class="et_pb_button" id="nodebb-register">Register</button>
-				<button class="et_pb_button" id="nodebb-login">Login</button>
-			</div><br/>
-			<!-- ENDIF !loggedIn -->
 		<div class="clearfix"></div>
 		<div style="max-width: 60%; margin: 0 auto; margin-top: 70px; margin-bottom: 50px; text-align:center;">
 			<small class="nodebb-copyright">Powered by <a href="http://nodebb.org" target="blank" rel="nofollow">NodeBB</a> &bull;
