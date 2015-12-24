@@ -95,7 +95,7 @@
 					template: Comments.template,
 					token: req.csrfToken(),
 					isAdmin: !data.isAdministrator ? data.isPublisher : data.isAdministrator,
-					isLoggedIn: !!uid,
+					loggedIn: uid !== 0,
 					tid: tid,
 					category: data.category,
 					mainPost: data.mainPost ? data.mainPost[0] : null,
