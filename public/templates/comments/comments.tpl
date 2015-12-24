@@ -42,12 +42,13 @@
 			<!-- ENDIF !loggedIn -->
 			<!-- IF loggedIn -->
 			<div class="logged_in">
-				<!-- IF user.picture -->
 				<div class="topic-profile-pic user">
+				<!-- IF user.picture -->
 					<img src="{user.picture}" alt="{user.username}" class="profile-image" title="{user.username}" style="vertical-align: middle;" />
-				<!-- ELSE -->
-					<div class="profile-image" style="background-color: {user.icon:bgColor}" title="{user.username}" alt="{user.username}">{user.icon:text}</div>
 				<!-- ENDIF user.picture -->
+				<!-- IF !user.picture -->
+					<div class="profile-image" style="background-color: {user.icon:bgColor}" title="{user.username}" alt="{user.username}">{user.icon:text}</div>
+				<!-- ENDIF !user.picture -->
 				<small>Signed in as <strong>{user.username}</strong>. <strong id="nodebb-error"></strong></small>
 				</div>
 				<div class="form-submit">
