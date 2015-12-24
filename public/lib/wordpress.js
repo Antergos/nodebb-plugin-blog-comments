@@ -90,7 +90,7 @@
 				nodebbDiv.innerHTML = normalizePost(html);
 			}
 
-			jQuery('#commentlist').children().each(function() { jQuery(this).prependTo(jQuery(this).parent()); });
+			jQuery('.commentslist').children().each(function() { jQuery(this).prependTo(jQuery(this).parent()); });
 
 			contentDiv = document.getElementById('nodebb-content');
 
