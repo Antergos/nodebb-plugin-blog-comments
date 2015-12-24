@@ -12,7 +12,6 @@
 	stylesheet.setAttribute("href", pluginURL + '/css/comments.css');
 
 	document.getElementsByTagName("head")[0].appendChild(stylesheet);
-
 	document.getElementById('nodebb/comments').insertAdjacentHTML('beforebegin', '<div id="nodebb"></div>');
 	nodebbDiv = document.getElementById('nodebb');
 
@@ -84,10 +83,10 @@
 			}
 
 			if (pagination) {
-				html = normalizePost(templates.parse(data.template, data));
+				html = normalizePost(parse(data, templates.blocks['posts']));
 				commentsDiv.innerHTML = commentsDiv.innerHTML + html;
 			} else {
-				html = templates.parse(data.template, data);
+				html = parse(data, data.template);
 				nodebbDiv.innerHTML = normalizePost(html);
 			}
 
@@ -113,7 +112,7 @@
 				loadMore.onclick = function() {
 					pagination++;
 					reloadComments();
-				};
+				}
 				if (data.posts.length) {
 					loadMore.style.display = 'inline-block';	
 				}
@@ -174,7 +173,7 @@
 						} else {
 							console.warn('Unable to access API. Please install the JSON API plugin located at: http://wordpress.org/plugins/json-api');
 						}
-					};
+					}
 
 					adminXHR.send();
 				}
@@ -227,7 +226,7 @@
 		return time;
 	}
 
-	/*var templates = {blocks: {}};
+	var templates = {blocks: {}};
 	function parse (data, template) {
 		function replace(key, value, template) {
 			var searchRegex = new RegExp('{' + key + '}', 'g');
@@ -362,5 +361,5 @@
 			return template;
 
 		})(data, "", template);
-	}*/
+	}
 }());
