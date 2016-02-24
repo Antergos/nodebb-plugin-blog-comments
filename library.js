@@ -119,10 +119,10 @@
 			content: content
 		}, function(err, postData) {
 			if(err) {
-				return res.redirect(url + '?error=' + err.message + '#nodebb/comments');
+				return res.redirect(url + '?error=' + err.message + '#nodebb-comments');
 			}
 
-			res.redirect(url + '#nodebb/comments');
+			res.redirect(url + '#nodebb-comments');
 		});
 	};
 
@@ -178,7 +178,7 @@
 						}
 						
 						db.setObjectField('blog-comments', commentID, result.postData.tid);
-						res.redirect((req.header('Referer') || '/') + '#nodebb/comments');
+						res.redirect((req.header('Referer') || '/') + '#nodebb-comments');
 					});
 				} else {
 					res.json({error: "Unable to post topic", result: result});
