@@ -156,7 +156,7 @@
 								translator = document.createElement('span'),
 								wptags = articleData.tags,
 								tags = [];
-							console.log(articleData);
+
 							translator.innerHTML = articleData.excerpt;
 
 							var markdown = translator.firstChild.innerHTML + '\n\n**Click [here]('+articlePath+') to see the full blog post**';
@@ -173,7 +173,7 @@
 						} else {
 							console.warn('Unable to access API. Please install the JSON API plugin located at: http://wordpress.org/plugins/json-api');
 						}
-					}
+					};
 
 					adminXHR.send();
 				}
